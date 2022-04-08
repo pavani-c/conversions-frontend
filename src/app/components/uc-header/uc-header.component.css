@@ -1,0 +1,22 @@
+
+.nav-item{
+    padding:2px;
+    margin-left: 7px;
+    font-size: large;
+}
+
+.main-heading{
+  margin-top:20px;
+  font-weight: bold;
+}
+
+.mr-auto{
+  margin-left: 70px;
+}
+
+.main-heading-div{
+  text-align: center;
+  background-color: #07afff;
+}
+
+

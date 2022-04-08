@@ -1,0 +1,38 @@
+<h2>Temperature Unit Conversion</h2>
+<form  #tempForm = "ngForm" (ngSubmit) = "validateStudentResponse(tempForm.value)">
+   <div class="mb-3 mt-3">
+        <label for="inputValue" class="form-label">Input Value:</label>
+        <input type="number" step="1.0" class="form-control" id="inputValue" placeholder="Enter Input Value" name="inputValue" ngModel>
+   </div>
+  <label for="inputUnit" class="form-label">Source Unit:</label>
+  <select class="form-select" id="inputUnit" name="inputUnit" ngModel>
+    <option value="celsius">CELSIUS</option>
+    <option value="fahrenheit">FAHRENHEIT</option>
+    <option value="kelvin">KELVIN</option>
+    <option value="rankine">RANKINE</option>
+  </select>
+
+  <br>
+  <label for="targetUnit" class="form-label">Target Unit:</label>
+  <select class="form-select" id="targetUnit" name="targetUnit" ngModel>
+    <option value="celsius">CELSIUS</option>
+    <option value="fahrenheit">FAHRENHEIT</option>
+    <option value="kelvin">KELVIN</option>
+    <option value="rankine">RANKINE</option>
+  </select>
+  <br>
+
+  <div class="mb-3 mt-3">
+    <label for="studentResponse" class="form-label">Student Response:</label>
+    <input type="number" step="1.0" class="form-control" id="studentResponse" placeholder="Enter Student Response" name="studentResponse" ngModel>
+</div>
+  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+<br>
+<div class="mt-3">
+<p class="text-success h1" *ngIf="conversionResult === 'correct'">Correct!</p>
+<p class="text-danger h1" *ngIf="conversionResult === 'incorrect'">Incorrect. Conversion Value: {{ this.conversionValue}}</p>
+<p class="text-danger h1" *ngIf="conversionResult === 'error'">Sorry, we are having system issues. Please try later.</p>
+</div>
+
+
